@@ -3,8 +3,18 @@ End-to-end data processing taking raw public health data from SQL queries into a
 
 Hypothesis : London boroughs with higher Index of Multiple Deprivation (IMD) scores exhibit higher rates of recorded diabetes prevalence due to the impact of wider social determinants of health.
 
-The finds validate the hypothesis:
+The findings validate the hypothesis:
+
 ![NHS Health Inequalities Dashboard](KPI_Cards.png)
+
+Correlation Analysis ```dax($R = 0.51, p < 2.2 \times 10^{-16}$)```dax 
+Indicates a statistically significant, moderate-to-strong positive correlation between deprivation rank and diabetes prevalence across Local Authorities.
+
+Absolute Inequality:
+SII of 2.22 indicates that moving from the least to the most deprived relative rank accounts for an absolute increase of 2.22 percentage points in diabetes prevalence.
+
+Relative Inequality: 
+RII Ratio of 1.33 demonstrates that the predicted diabetes prevalence in the most deprived communities is 1.33 times (33% higher) than that of the least deprived communities.
 
 Interactive Dashboard Overview:
 
