@@ -10,6 +10,7 @@ Interactive Dashboard Overview:
 Statistical Methodology & Key Metrics
 
 --Slope Index of Inequality (SII): A population weighted linear regression slop the difference between health outcomes between the most and least deprived relative ranks.
+
 --Relative Index of Inequality (RII Ratio): The ratio of predicted health outcomes at the extremes of deprivation.
 ```dax
 --Core DAX code:
