@@ -7,8 +7,9 @@ The findings validate the hypothesis:
 
 ![NHS Health Inequalities Dashboard](KPI_Cards.png)
 
-Correlation Analysis ```dax($R = 0.51, p < 2.2 \times 10^{-16}$)```dax 
-Indicates a statistically significant, moderate-to-strong positive correlation between deprivation rank and diabetes prevalence across Local Authorities.
+Correlation Analysis:
+R = 0.51, p < 0.001
+Statistically significant, moderate-strong positive correlation between deprivation rank and diabetes prevalence across Local Authorities.
 
 Absolute Inequality:
 SII of 2.22 indicates that moving from the least to the most deprived relative rank accounts for an absolute increase of 2.22 percentage points in diabetes prevalence.
