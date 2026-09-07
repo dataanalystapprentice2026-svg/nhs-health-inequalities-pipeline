@@ -1,1 +1,23 @@
+RII RATIO = 
+ VAR OverallTotalPopulation =
+ CALCULATE(
+    SUM(Data[Total_Population]
+    ),
+    ALLSELECTED(data)
+ )
+VAR Weighted_Y_mean =
+DIVIDE(
+    CALCULATE(
+        SUMX(Data, Data[Diabetes_Prevalence]*Data[Total_Population]
+        ),
+        ALLSELECTED(Data)
+    ),
+    OverallTotalPopulation)
+    
+VAR Intercept = 
+    Weighted_Y_mean- ([SII] * 0.5)
+VAR Rate_Most_deprived = Intercept + [SII]
+VAR Rate_least_deprived = Intercept
 
+RETURN
+DIVIDE(Rate_Most_deprived, Rate_least_deprived)
