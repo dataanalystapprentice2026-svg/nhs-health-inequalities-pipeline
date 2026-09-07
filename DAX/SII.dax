@@ -1,42 +1,29 @@
-Code snippet
 SII = 
-VAR overallTotalPopulation = 
-    CALCULATE(
-        SUM(Data[Total_Population]), 
-        ALLSELECTED(Data)
+VAR overallTotalPopulation = CALCULATE(
+    SUM(Data[Total_Population]
+    ),
+    ALLSELECTED(Data)
     )
-
 VAR Weighted_X_mean = 0.5
 
-VAR Weighted_Y_mean = 
-    DIVIDE(
-        CALCULATE(
-            SUMX(Data, Data[Diabetes_Prevalence] * Data[Total_Population]), 
-            ALLSELECTED(Data)
-        ),
-        overallTotalPopulation
-    )
+VAR Weighted_Y_mean =
+ DIVIDE(
+    CALCULATE(
+        SUMX(Data, (Data[Diabetes_Prevalence])*Data[Total_Population]), ALLSELECTED(Data)
+    ),
+    overallTotalPopulation)
 
 VAR Covariancee = 
-    CALCULATE(
-        SUMX(
-            Data, 
-            Data[Total_Population] * 
-            ([Rank_Midpoint] - Weighted_X_mean) * 
-            (Data[Diabetes_Prevalence] - Weighted_Y_mean)
-        ),
-        ALLSELECTED(Data)
-    )
-
+  CALCULATE(
+    SUMX(Data, Data[Total_Population]*(Measures_All[Rank_Midpoint] - Weighted_X_mean)*((Data[Diabetes_Prevalence]) - Weighted_Y_mean)
+    ),
+     ALLSELECTED(Data))
 VAR variancee = 
-    CALCULATE(
-        SUMX(
-            Data, 
-            Data[Total_Population] * 
-            POWER([Rank_Midpoint] - Weighted_X_mean, 2)
-        ),
-        ALLSELECTED(Data)
-    )
+CALCULATE(
+    SUMX(Data, Data[Total_Population]*
+    POWER((Measures_All[Rank_Midpoint] - Weighted_X_mean), 2)
+    ),
+    ALLSELECTED(Data))
 
-RETURN
+    RETURN
     DIVIDE(Covariancee, variancee)
