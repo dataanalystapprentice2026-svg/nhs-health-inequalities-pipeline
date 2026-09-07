@@ -10,10 +10,10 @@ Statistical Methodology & Key Metrics
 
 --Slope Index of Inequality (SII): A population weighted linear regression slop the difference between health outcomes between the most and least deprived relative ranks.
 --Relative Index of Inequality (RII Ratio): The ratio of predicted health outcomes at the extremes of deprivation.
-
+```dax
 --Core DAX code:
 1. Slope Index of Inequality (SII)
-
+'''dax
 SII = 
 VAR overallTotalPopulation = CALCULATE(
     SUM(Data[Total_Population]
@@ -45,7 +45,7 @@ CALCULATE(
     DIVIDE(Covariancee, variancee)
 
 2. Relative Index of Inequality Ratio (RII Ratio)
-
+```dax
 RII RATIO = 
  VAR OverallTotalPopulation =
  CALCULATE(
