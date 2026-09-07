@@ -1,1 +1,25 @@
+-- =============================================================================
+-- --Project: Diabetes Prevalence vs. Deprivation Analysis (Lewisham Focus)
+-- --Author: Public Health Analyst
+-- --Description: Merges Diabetes QOF Prevalence (2024/25) with IMD 2025 scores.
+-- =============================================================================
 
+USE PublicHealthDB
+GO
+
+SELECT
+	d.Area_Code,
+	d.Area_Name,
+	d.Time_period AS Time_Period,
+	d.Value AS Diabetes_Prevalence,
+	d.Denominator AS Total_Population,
+	i.IMD_Average_score AS IMD_Average_Score,
+--Generate 10 national deprivation groups (1 = Most Deprived, 10 = Least Deprived)
+	NTILE(10) OVER (ORDER BY i.IMD_Average_score DESC) AS IMD_Decile
+FROM dbo.diabetes AS d
+LEFT JOIN dbo.imd AS i
+	ON d.Area_Code = i.Local_Authority_District_code_2024
+	WHERE d.Time_period = '2024/25'
+	AND d.Value IS NOT NULL
+	AND i.IMD_Average_score IS NOT NULL
+	ORDER BY i.IMD_Average_score ASC;
