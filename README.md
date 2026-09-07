@@ -3,7 +3,8 @@ End-to-end data processing—taking raw public health data from SQL queries into
 
 Hypothesis : London boroughs with higher Index of Multiple Deprivation (IMD) scores exhibit higher rates of recorded diabetes prevalence due to the impact of wider social determinants of health.
 
-Interactive Dashboard Overview
+Interactive Dashboard Overview:
+
 ![NHS Health Inequalities Dashboard](dashboard.png)
 
 Statistical Methodology & Key Metrics
@@ -45,7 +46,7 @@ CALCULATE(
     DIVIDE(Covariancee, variancee)
 
 2. Relative Index of Inequality Ratio (RII Ratio)
-```dax
+
 RII RATIO = 
  VAR OverallTotalPopulation =
  CALCULATE(
