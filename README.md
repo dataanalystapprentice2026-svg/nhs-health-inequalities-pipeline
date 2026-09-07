@@ -4,6 +4,7 @@ End-to-end data processing taking raw public health data from SQL queries into a
 Hypothesis : London boroughs with higher Index of Multiple Deprivation (IMD) scores exhibit higher rates of recorded diabetes prevalence due to the impact of wider social determinants of health.
 
 The finds validate the hypothesis:
+![NHS Health Inequalities Dashboard](KPI_Cards.png)
 
 Interactive Dashboard Overview:
 
