@@ -19,7 +19,7 @@ RII Ratio of 1.33 demonstrates that the predicted diabetes prevalence in the mos
 
 Interactive Dashboard Overview:
 
-![NHS Health Inequalities Dashboard](dashboard.png)
+![NHS Health Inequalities Dashboard](dashboard)
 
 Statistical Methodology & Key Metrics
 
