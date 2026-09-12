@@ -5,7 +5,7 @@ Hypothesis : London boroughs with higher Index of Multiple Deprivation (IMD) sco
 
 The findings validate the hypothesis:
 
-![NHS Health Inequalities Dashboard](KPI_Cards.png)
+![NHS Health Inequalities Dashboard](KPI_Card.png)
 
 Correlation Analysis:
 R = 0.51, p < 0.001
