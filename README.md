@@ -1,7 +1,9 @@
 # NHS-health-inequalities-pipeline
-End-to-end data processing taking raw public health data from SQL queries into a Power BI model, using DAX for analytical measures, and applying R for visual output.
+Project Title: Regional Health Inequalities Pipeline: Analyzing the Association Between Deprivation (IMD) and Diabetes Prevalence.
 
-Hypothesis : London boroughs with higher Index of Multiple Deprivation (IMD) scores exhibit higher rates of recorded diabetes prevalence due to the impact of wider social determinants of health.
+Tech Stack: SQL Server Management Studio (SSMS), R, and Power BI.
+
+Key Focus: Extracting and blending NHS Digital QOF registers with the IMD dataset to evaluate absolute and relative health gaps.
 
 The findings validate the hypothesis:
 
