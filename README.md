@@ -1,9 +1,9 @@
 # NHS-health-inequalities-pipeline
-Project Title: Regional Health Inequalities Pipeline: Analyzing the Association Between Deprivation (IMD) and Diabetes Prevalence.
+Core Objective: Evaluates the statistical association between socioeconomic deprivation (MHCLG Index of Multiple Deprivation 2025) and Type 2 Diabetes prevalence across local authorities in England to support Joint Strategic Needs Assessments (JSNAs).
 
-Tech Stack: SQL Server Management Studio (SSMS), R, and Power BI.
+National Benchmarking: Ingests and cleans national NHS Digital Quality and Outcomes Framework (QOF) registers across all English local authorities, enabling regional comparisons and disparity baseline tracking.
 
-Key Focus: Extracting and blending NHS Digital QOF registers with the IMD dataset to evaluate absolute and relative health gaps.
+Technical Architecture: Built using an end-to-end analytics workflow incorporating SQL Server Management Studio (SSMS) for data cleaning, R for statistical modelling, and an interactive Power BI dashboard with custom DAX metrics to track absolute and relative health gaps.
 
 The findings validate the hypothesis:
 
